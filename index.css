@@ -1,0 +1,296 @@
+/* 공통설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* 공통설정 */
+/* 
+ */
+/* 헤더시작 */
+header {
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  padding: 10px 25px;
+  align-items: center;
+  z-index: 10;
+}
+#logobox {
+  display: flex;
+}
+#logobox a {
+  padding-right: 60px;
+}
+#logo {
+  width: 100px;
+}
+.icons {
+  height: 23px;
+}
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-box a {
+  padding: 0 10px;
+}
+
+#search-box {
+  width: 100%;
+}
+
+/* 검색창 */
+#input-box {
+  width: 40%;
+  height: 41px;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 20px 0 0 20px;
+  padding: 0 15px;
+  margin-left: 10px;
+  box-shadow: inset 2px 3px rgba(215, 215, 215, 0.1);
+  outline: none;
+}
+
+#input-box:focus {
+  border-color: darkblue;
+  box-shadow: inset 1px 3px 7px rgba(215, 215, 215);
+}
+
+/* 검색버튼 */
+#search-btn {
+  background-color: rgb(244, 244, 244);
+  border-radius: 0 20px 20px 0;
+  border: 1px solid rgb(195, 195, 195);
+  border-left: none;
+  padding: 6px;
+  width: 70px;
+  text-align: center;
+}
+#search-btn:hover {
+  background-color: rgb(195, 195, 195);
+}
+
+/* 마이크버튼 */
+#mic-btn {
+  border-radius: 20px;
+  width: fit-content;
+  margin: 5px;
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  align-items: center;
+  height: 41px;
+}
+
+#mic-btn:hover {
+  background-color: rgb(195, 195, 195);
+}
+
+.menu-background {
+  position: relative;
+  transition: all 2s;
+}
+
+.menu-background:hover::before {
+  background-color: rgb(195, 195, 195);
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  right: -9px;
+  bottom: -5px;
+}
+
+.personal-background {
+  position: relative;
+}
+
+.personal-background:hover::before {
+  background-color: rgb(195, 195, 195);
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 1px;
+  top: -8px;
+}
+/* 헤더 끝 */
+/* 
+ */
+/* 내브바 시작 */
+nav {
+  background-color: #fff;
+  position: fixed;
+  top: 70px;
+  height: 100vh;
+  font-size: 11px;
+  text-align: center;
+  width: 70px;
+}
+.nav-background {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.nav-text {
+  text-overflow: ellipsis;
+  /*  */
+  overflow: hidden;
+  /*  */
+  white-space: nowrap;
+  /*  */
+  word-break: break-all;
+  /*  */
+}
+.nav-menu {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+}
+.nav-menu:hover {
+  background-color: rgba(195, 195, 195, 0.2);
+  border-radius: 20px;
+}
+/* 내브바 끝 */
+/* 
+ */
+/* 메인 시작 (영상목록) */
+main {
+  margin: 0 auto;
+}
+
+.article-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 92px;
+  padding-left: 120px;
+}
+article {
+  flex-basis: 262px;
+  flex-grow: 1;
+}
+
+.thumbnail {
+  max-width: 300px;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.infobox {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* 프로필아이콘 */
+.profile-img {
+  margin-right: 10px;
+}
+
+.info {
+  width: 75%;
+}
+
+/*영상 제목 */
+.title {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* 영상 부가 설명 */
+.desc {
+  font-size: 12px;
+  color: rgb(96, 95, 95);
+}
+
+/* 채널명 */
+.channel {
+  margin-bottom: 5px;
+}
+/* 메인 끝 (영상목록) */
+/* 
+ */
+/* 모니터별 사이즈 */
+/* 내브바 사라짐 */
+@media (max-width: 791px) {
+  nav {
+    display: none;
+  }
+  .article-box {
+    padding-left: 90px;
+  }
+}
+
+/* 검색창 사라짐 */
+@media (max-width: 658px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+  }
+  #search-box {
+    display: none;
+  }
+}
+
+/* grid */
+/* .article-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 92px;
+  padding-left: 120px;
+}
+article {
+  margin-bottom: 50px;
+} */
+
+/* @media (min-width: 2120px) {
+  .article-box {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1783px) {
+  .article-box {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1127px) {
+  .article-box {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 887px) {
+  .article-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 511px) {
+  .article-box {
+    grid-template-columns: 1fr;
+  }
+} */
+
+/* @media (max-width: 791px) {
+  nav {
+    display: none;
+  }
+} */
+/* grid */
