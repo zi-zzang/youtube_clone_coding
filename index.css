@@ -107,10 +107,10 @@ header {
   border-radius: 20px;
   height: 40px;
   width: 40px;
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
-  right: -9px;
+  right: 50px;
   bottom: -5px;
 }
 
@@ -123,7 +123,7 @@ header {
   border-radius: 20px;
   height: 40px;
   width: 40px;
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   left: 1px;
