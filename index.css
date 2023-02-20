@@ -227,6 +227,21 @@ article {
 /* 메인 끝 (영상목록) */
 /* 
  */
+#floating-icon {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  border-radius: 50px;
+}
 /* 모니터별 사이즈 */
 /* 내브바 사라짐 */
 @media (max-width: 791px) {
